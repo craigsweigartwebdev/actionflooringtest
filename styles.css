@@ -1,0 +1,92 @@
+/* ==================== SHARED STYLES ==================== */
+/* Used across all pages */
+
+/* Fonts */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero background */
+.hero-bg {
+    background-color: #1a202c;
+    background-image: url("https://images.unsplash.com/photo-1581858726768-758a0336195c?w=1200&q=60");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+/* Page header (non-home pages) */
+.page-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+/* Form focus states */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+/* Button hover lift */
+.btn-lift {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Gallery item overlay */
+.gallery-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Service card image zoom */
+.service-card img {
+    transition: transform 0.5s;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Scroll margin for anchor links */
+[id] {
+    scroll-margin-top: 80px;
+}
