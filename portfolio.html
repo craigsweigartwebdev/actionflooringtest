@@ -8,7 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -18,43 +17,64 @@
             <p class="hidden md:block text-gray-300">Serving Treasure Valley, Twin Falls, Cascade, McCall & Sun Valley</p>
             <div class="flex items-center gap-4">
                 <a href="tel:208-995-9186" class="flex items-center gap-1 font-semibold hover:text-amber-400 transition">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
                     208-995-9186
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- ==================== NAVIGATION ==================== -->
+    <!-- ==================== SIGNAL NAVIGATION ==================== -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center"><span class="text-amber-400 font-bold text-lg">AF</span></div>
-                <div><span class="text-xl font-serif font-bold text-slate-800 block leading-none">ACTION</span><span class="text-xs font-bold tracking-widest text-amber-600">FLOORING 208</span></div>
+                <div class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center">
+                    <span class="text-amber-400 font-bold text-lg">AF</span>
+                </div>
+                <div>
+                    <span class="text-xl font-serif font-bold text-slate-800 block leading-none">ACTION</span>
+                    <span class="text-xs font-bold tracking-widest text-amber-600">FLOORING 208</span>
+                </div>
             </a>
+            
+            <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center gap-6">
                 <a href="index.html" class="font-medium hover:text-amber-600 transition">Home</a>
                 <a href="services.html" class="font-medium hover:text-amber-600 transition">Services</a>
                 <a href="about.html" class="font-medium hover:text-amber-600 transition">About</a>
+                <a href="estimator.html" class="font-medium hover:text-amber-600 transition">Price Estimator</a>
+                <a href="visualizer.html" class="font-medium hover:text-amber-600 transition">Interactive Studio</a>
                 <a href="portfolio.html" class="font-medium text-amber-600">Portfolio</a>
                 <a href="contact.html" class="font-medium hover:text-amber-600 transition">Contact</a>
-                <a href="quote.html" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-5 py-2 rounded-full transition">Get Estimate</a>
+                <a href="quote.html" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-5 py-2 rounded-full transition">Get Quote</a>
             </div>
-            <button id="menuBtn" class="lg:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" class="lg:hidden p-2 text-slate-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
         </div>
+
+        <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden lg:hidden bg-gray-50 border-t px-4 py-2">
-            <a href="index.html" class="block py-2">Home</a>
-            <a href="services.html" class="block py-2">Services</a>
-            <a href="about.html" class="block py-2">About</a>
+            <a href="index.html" class="block py-2 hover:text-amber-600">Home</a>
+            <a href="services.html" class="block py-2 hover:text-amber-600">Services</a>
+            <a href="estimator.html" class="block py-2 hover:text-amber-600">Price Estimator</a>
+            <a href="studio.html" class="block py-2 hover:text-amber-600">Interactive Studio</a>
+            <a href="about.html" class="block py-2 hover:text-amber-600">About</a>
             <a href="portfolio.html" class="block py-2 text-amber-600">Portfolio</a>
-            <a href="contact.html" class="block py-2">Contact</a>
-            <a href="quote.html" class="block py-2 mt-2 bg-amber-500 text-white text-center rounded-lg">Get Estimate</a>
+            <a href="contact.html" class="block py-2 hover:text-amber-600">Contact</a>
+            <a href="quote.html" class="block py-2 mt-2 bg-amber-500 text-white text-center rounded-lg hover:bg-amber-600 transition">Get Quote</a>
         </div>
     </nav>
 
     <!-- ==================== PAGE HEADER ==================== -->
-    <header class="page-header text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+    <header class="page-header bg-slate-800 text-white py-16 text-center">
+        <div class="max-w-7xl mx-auto px-4">
             <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Our Portfolio</h1>
             <p class="text-xl text-gray-300 max-w-2xl mx-auto">Browse our completed flooring projects across Idaho.</p>
         </div>
@@ -64,7 +84,7 @@
     <section class="py-8 bg-white border-b">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-wrap justify-center gap-2" id="filters">
-                <button class="filter-btn active px-5 py-2 rounded-full font-medium bg-slate-800 text-white transition" data-filter="all">All Projects</button>
+                <button class="filter-btn active px-5 py-2 rounded-full font-medium bg-slate-800 text-white transition shadow-sm" data-filter="all">All Projects</button>
                 <button class="filter-btn px-5 py-2 rounded-full font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-filter="hardwood">Hardwood</button>
                 <button class="filter-btn px-5 py-2 rounded-full font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-filter="lvp">LVP/LVT</button>
                 <button class="filter-btn px-5 py-2 rounded-full font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-filter="carpet">Carpet</button>
@@ -81,7 +101,7 @@
                 <!-- Project 1 -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md relative group cursor-pointer bg-white" data-cat="hardwood">
                     <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=500&q=60" alt="Hardwood Project" class="w-full h-56 object-cover">
-                    <div class="gallery-overlay absolute inset-0 flex items-end p-5">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
                         <div class="text-white">
                             <h4 class="font-bold text-lg">Modern Oak Hardwood</h4>
                             <p class="text-sm text-gray-300">Boise, ID • Living Room</p>
@@ -92,7 +112,7 @@
                 <!-- Project 2 -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md relative group cursor-pointer bg-white" data-cat="lvp">
                     <img src="https://images.unsplash.com/photo-1484154218962-a1c429d4c713?w=500&q=60" alt="LVP Project" class="w-full h-56 object-cover">
-                    <div class="gallery-overlay absolute inset-0 flex items-end p-5">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
                         <div class="text-white">
                             <h4 class="font-bold text-lg">Luxury Vinyl Plank</h4>
                             <p class="text-sm text-gray-300">Meridian, ID • Kitchen</p>
@@ -103,7 +123,7 @@
                 <!-- Project 3 -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md relative group cursor-pointer bg-white" data-cat="carpet">
                     <img src="https://images.unsplash.com/photo-1522771772030-2f588605ce01?w=500&q=60" alt="Carpet Project" class="w-full h-56 object-cover">
-                    <div class="gallery-overlay absolute inset-0 flex items-end p-5">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
                         <div class="text-white">
                             <h4 class="font-bold text-lg">Plush Carpet Install</h4>
                             <p class="text-sm text-gray-300">Eagle, ID • Bedroom</p>
@@ -114,7 +134,7 @@
                 <!-- Project 4 -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md relative group cursor-pointer bg-white" data-cat="refinish">
                     <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&q=60" alt="Refinishing Project" class="w-full h-56 object-cover">
-                    <div class="gallery-overlay absolute inset-0 flex items-end p-5">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
                         <div class="text-white">
                             <h4 class="font-bold text-lg">Floor Refinishing</h4>
                             <p class="text-sm text-gray-300">Twin Falls, ID • Whole Home</p>
@@ -125,7 +145,7 @@
                 <!-- Project 5 -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md relative group cursor-pointer bg-white" data-cat="hardwood">
                     <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=500&q=60" alt="Oak Project" class="w-full h-56 object-cover">
-                    <div class="gallery-overlay absolute inset-0 flex items-end p-5">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
                         <div class="text-white">
                             <h4 class="font-bold text-lg">Classic Oak Installation</h4>
                             <p class="text-sm text-gray-300">McCall, ID • Open Floor Plan</p>
@@ -136,7 +156,7 @@
                 <!-- Project 6 -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md relative group cursor-pointer bg-white" data-cat="lvp">
                     <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&q=60" alt="LVT Project" class="w-full h-56 object-cover">
-                    <div class="gallery-overlay absolute inset-0 flex items-end p-5">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
                         <div class="text-white">
                             <h4 class="font-bold text-lg">LVT Tile Look</h4>
                             <p class="text-sm text-gray-300">Sun Valley, ID • Bathroom</p>
@@ -147,7 +167,7 @@
                 <!-- Project 7 -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md relative group cursor-pointer bg-white" data-cat="hardwood">
                     <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=60" alt="Engineered Project" class="w-full h-56 object-cover">
-                    <div class="gallery-overlay absolute inset-0 flex items-end p-5">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
                         <div class="text-white">
                             <h4 class="font-bold text-lg">Engineered Hardwood</h4>
                             <p class="text-sm text-gray-300">Boise, ID • Family Room</p>
@@ -158,7 +178,7 @@
                 <!-- Project 8 -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md relative group cursor-pointer bg-white" data-cat="carpet">
                     <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=60" alt="Commercial Carpet" class="w-full h-56 object-cover">
-                    <div class="gallery-overlay absolute inset-0 flex items-end p-5">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
                         <div class="text-white">
                             <h4 class="font-bold text-lg">Commercial Carpet</h4>
                             <p class="text-sm text-gray-300">Meridian, ID • Office</p>
@@ -169,7 +189,7 @@
                 <!-- Project 9 -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md relative group cursor-pointer bg-white" data-cat="refinish">
                     <img src="https://images.unsplash.com/photo-1581858726768-758a0336195c?w=500&q=60" alt="Restoration Project" class="w-full h-56 object-cover">
-                    <div class="gallery-overlay absolute inset-0 flex items-end p-5">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
                         <div class="text-white">
                             <h4 class="font-bold text-lg">Historic Floor Restoration</h4>
                             <p class="text-sm text-gray-300">Boise, ID • Historic Home</p>
@@ -182,12 +202,12 @@
     </section>
 
     <!-- ==================== CTA ==================== -->
-    <section class="py-16 bg-slate-800">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+    <section class="py-16 bg-slate-800 text-center">
+        <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-serif font-bold text-white mb-5">Want Your Project Featured?</h2>
-            <p class="text-slate-300 mb-8 max-w-xl mx-auto">Let's transform your floors next. Get a free estimate today!</p>
+            <p class="text-slate-300 mb-8 max-w-xl mx-auto">Let's transform your floors next. Get a free quote today!</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="quote.html" class="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-lg transition">Request Quote</a>
+                <a href="quote.html" class="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-lg transition shadow-md">Get Quote</a>
                 <a href="tel:208-995-9186" class="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-slate-900 font-bold rounded-lg transition">Call 208-995-9186</a>
             </div>
         </div>
@@ -225,8 +245,8 @@
                 <div>
                     <h4 class="font-bold text-white mb-3">Contact</h4>
                     <ul class="space-y-1 text-sm">
-                        <li><a href="tel:208-995-9186" class="hover:text-amber-400">📞 208-995-9186</a></li>
-                        <li><a href="mailto:info@actionflooring208.com" class="hover:text-amber-400">✉ info@actionflooring208.com</a></li>
+                        <li><a href="tel:208-995-9186" class="hover:text-amber-400">208-995-9186</a></li>
+                        <li><a href="mailto:info@actionflooring208.com" class="hover:text-amber-400">info@actionflooring208.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -239,8 +259,10 @@
     <!-- ==================== SCRIPTS ==================== -->
     <script>
         // Mobile menu
-        document.getElementById('menuBtn').onclick = () => document.getElementById('mobileMenu').classList.toggle('hidden');
-        
+        document.getElementById('menuBtn').onclick = () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        };
+
         // Gallery filter
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.onclick = function() {
@@ -251,7 +273,7 @@
                 });
                 this.classList.add('bg-slate-800', 'text-white');
                 this.classList.remove('bg-gray-200', 'text-gray-700');
-                
+
                 // Filter items
                 const filter = this.dataset.filter;
                 document.querySelectorAll('.gallery-item').forEach(item => {
@@ -260,6 +282,6 @@
             };
         });
     </script>
-    <script src="modules/module-tester.js"></script>
 </body>
 </html>
+x

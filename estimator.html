@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Project Estimator | Action Flooring 208</title>
+    <meta name="description" content="Calculate your flooring installation costs in real-time. Serving Treasure Valley, Twin Falls, Cascade, McCall & Sun Valley.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <!-- ==================== TOP BAR ==================== -->
+    <div class="bg-slate-900 text-white py-2 text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between items-center gap-2">
+            <p class="hidden md:block text-gray-300">Serving Treasure Valley, Twin Falls, Cascade, McCall & Sun Valley</p>
+            <div class="flex items-center gap-4">
+                <a href="mailto:info@actionflooring208.com" class="hidden sm:flex items-center gap-1 text-gray-300 hover:text-amber-400 transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    info@actionflooring208.com
+                </a>
+                <a href="tel:208-995-9186" class="flex items-center gap-1 font-semibold hover:text-amber-400 transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    208-995-9186
+                </a>
+                <span class="hidden sm:block text-amber-400 font-medium">Available 7 days/week</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center">
+                    <span class="text-amber-400 font-bold text-lg">AF</span>
+                </div>
+                <div>
+                    <span class="text-xl font-serif font-bold text-slate-800 block leading-none">ACTION</span>
+                    <span class="text-xs font-bold tracking-widest text-amber-600">FLOORING 208</span>
+                </div>
+            </a>
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center gap-6">
+                <a href="index.html" class="font-medium hover:text-amber-600 transition">Home</a>
+                <a href="services.html" class="font-medium hover:text-amber-600 transition">Services</a>
+                <a href="about.html" class="font-medium hover:text-amber-600 transition">About</a>
+                <a href="estimator.html" class="font-medium text-amber-600">Price Estimator</a>
+                <a href="visualizer.html" class="font-medium hover:text-amber-600 transition">Interactive Studio</a>
+                <a href="portfolio.html" class="font-medium hover:text-amber-600 transition">Portfolio</a>
+                <a href="contact.html" class="font-medium hover:text-amber-600 transition">Contact</a>
+                <a href="quote.html" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-5 py-2 rounded-full transition">Get Quote</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" class="lg:hidden p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-gray-50 border-t px-4 py-2">
+            <a href="index.html" class="block py-2 hover:text-amber-600">Home</a>
+            <a href="services.html" class="block py-2 hover:text-amber-600">Services</a>
+            <a href="about.html" class="block py-2 hover:text-amber-600">About</a>
+            <a href="estimator.html" class="block py-2 text-amber-600">Price Estimator</a>
+            <a href="visualizer.html" class="block py-2 hover:text-amber-600">Interactive Studio</a>
+            <a href="portfolio.html" class="block py-2 hover:text-amber-600">Portfolio</a>
+            <a href="contact.html" class="block py-2 hover:text-amber-600">Contact</a>
+            <a href="quote.html" class="block py-2 mt-2 bg-amber-500 text-white text-center rounded-lg">Get Estimate</a>
+        </div>
+    </nav>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <header class="bg-slate-800 text-white py-12 border-b border-slate-700">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="text-amber-400 font-bold uppercase text-xs tracking-wider">Plan Your Budget</span>
+            <h1 class="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4">Instant Project Estimator</h1>
+            <p class="text-gray-300 max-w-xl mx-auto text-sm md:text-base">
+                Get an instant, customized baseline calculation for your space. Adjust your square footage, and flooring types to get an immediate estimate.
+            </p>
+        </div>
+    </header>
+
+    <!-- ==================== ESTIMATOR SURFACE ==================== -->
+    <main class="flex-1 py-12 px-4 max-w-4xl mx-auto w-full">
+        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100 grid md:grid-cols-5 gap-8">
+            
+            <!-- Inputs Column (3/5 width) -->
+            <div class="md:col-span-3 space-y-6">
+                <div>
+                    <label for="floorType" class="block text-sm font-semibold text-slate-700 mb-2">1. Select Flooring Type</label>
+                    <select id="floorType" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-amber-500 focus:bg-white text-slate-800 transition">
+                        <option value="hardwood">Hardwood Flooring (Prefinished & Solid)</option>
+                        <option value="lvp">LVP & LVT (Waterproof Luxury Vinyl)</option>
+                        <option value="laminate">Laminate Flooring</option>
+                        <option value="carpet">Carpet Installation</option>
+                    </select>
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <label for="sqftInput" class="text-sm font-semibold text-slate-700">2. Total Square Footage</label>
+                        <span class="text-amber-600 font-bold bg-amber-50 px-2 py-0.5 rounded text-sm">
+                            <span id="sqftBadge">250</span> sq. ft.
+                        </span>
+                    </div>
+                    <input id="sqftInput" type="range" min="50" max="3000" step="25" value="250" class="w-full accent-amber-500 cursor-pointer h-2 bg-gray-200 rounded-lg appearance-none">
+                    <div class="flex justify-between text-xs text-gray-400 mt-1">
+                        <span>50 sq. ft.</span>
+                        <span>1,500 sq. ft.</span>
+                        <span>3,000 sq. ft.</span>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <span class="block text-sm font-semibold text-slate-700 mb-2">3. Additional Project Logistics</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <label class="flex items-center gap-3 p-3 border border-gray-100 rounded-lg bg-gray-50 hover:bg-gray-100 cursor-pointer transition select-none">
+                            <input id="optPrep" type="checkbox" class="w-4 h-4 accent-amber-500 rounded">
+                            <div class="text-sm">
+                                <span class="font-medium text-slate-800 block">Subfloor Prep</span>
+                                <span class="text-xs text-gray-400">Levelling & patching</span>
+                            </div>
+                        </label>
+                        <label class="flex items-center gap-3 p-3 border border-gray-100 rounded-lg bg-gray-50 hover:bg-gray-100 cursor-pointer transition select-none">
+                            <input id="optRemoval" type="checkbox" class="w-4 h-4 accent-amber-500 rounded">
+                            <div class="text-sm">
+                                <span class="font-medium text-slate-800 block">Old Floor Tear Out</span>
+                                <span class="text-xs text-gray-400">Debris hauling included</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outputs Dashboard Column (2/5 width) -->
+            <div class="md:col-span-2 bg-slate-900 rounded-xl p-6 text-white flex flex-col justify-between shadow-inner min-h-[320px]">
+                <div>
+                    <h3 class="text-amber-400 font-bold tracking-wider text-xs uppercase mb-4">Estimated Summary</h3>
+                    <div class="space-y-3 border-b border-slate-800 pb-4 text-sm text-slate-300">
+                        <div class="flex justify-between">
+                            <span>Materials cost:</span>
+                            <span class="font-semibold text-white" id="outMaterial">$0.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Installation labor:</span>
+                            <span class="font-semibold text-white" id="outLabor">$0.00</span>
+                        </div>
+                        <div class="flex justify-between text-xs text-slate-400" id="rowAddons">
+                            <span>Add-ons / Logistics:</span>
+                            <span class="font-semibold text-white" id="outAddons">$0.00</span>
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <span class="text-slate-400 text-xs block uppercase tracking-wider">Total Investment Range</span>
+                        <div class="text-3xl font-bold text-amber-400 mt-1" id="outTotal">$0.00</div>
+                        <p class="text-slate-400 text-[10px] mt-2 leading-relaxed">
+                            *Calculations represent generalized regional estimations. Actual on-site structural profiles and custom parameters may influence true final values.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-800">
+                    <a href="quote.html" class="block w-full py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold text-center rounded-lg transition text-sm shadow">
+                        Lock In Your Official Quote
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-gray-900 text-gray-400 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-8 h-8 bg-slate-800 rounded flex items-center justify-center">
+                            <span class="text-amber-400 font-bold text-sm">AF</span>
+                        </div>
+                        <div>
+                            <span class="font-serif font-bold text-white block leading-none">ACTION</span>
+                            <span class="text-xs font-bold tracking-widest text-amber-500">FLOORING 208</span>
+                        </div>
+                    </div>
+                    <p class="text-sm">Customer Service is our #1 Value. 20+ years experience.</p>
+                    <p class="text-green-400 text-sm mt-2">Available 7 days a week</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-white mb-3">Quick Links</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="index.html" class="hover:text-amber-400 transition">Home</a></li>
+                        <li><a href="services.html" class="hover:text-amber-400 transition">Services</a></li>
+                        <li><a href="about.html" class="hover:text-amber-400 transition">About</a></li>
+                        <li><a href="portfolio.html" class="hover:text-amber-400 transition">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-amber-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Services -->
+                <div>
+                    <h4 class="font-bold text-white mb-3">Services</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="services.html#hardwood" class="hover:text-amber-400 transition">Hardwood</a></li>
+                        <li><a href="services.html#lvp" class="hover:text-amber-400 transition">LVP & LVT</a></li>
+                        <li><a href="services.html#laminate" class="hover:text-amber-400 transition">Laminate</a></li>
+                        <li><a href="services.html#carpet" class="hover:text-amber-400 transition">Carpet</a></li>
+                        <li><a href="services.html#refinishing" class="hover:text-amber-400 transition">Refinishing</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-bold text-white mb-3">Contact</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="tel:208-995-9186" class="hover:text-amber-400 transition">208-995-9186</a></li>
+                        <li><a href="mailto:info@actionflooring208.com" class="hover:text-amber-400 transition">info@actionflooring208.com</a></li>
+                    </ul>
+                    <p class="text-sm mt-3">Treasure Valley • Twin Falls • Cascade • McCall • Sun Valley</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-center text-sm">
+                <p>© 2026 Action Flooring 208. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== APPLICATION RUNTIME ==================== -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuBtn').onclick = () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        };
+
+        /* ==================== PRICE ESTIMATOR LOGIC ==================== */
+        const estimatorConfig = {
+            hardwood: { materialPerSqft: 6.50, laborPerSqft: 5.00 },
+            lvp: { materialPerSqft: 3.50, laborPerSqft: 3.00 },
+            laminate: { materialPerSqft: 2.75, laborPerSqft: 2.50 },
+            carpet: { materialPerSqft: 2.00, laborPerSqft: 1.75 },
+            addons: { subfloorPrepPerSqft: 1.25, tearOutPerSqft: 1.50 }
+        };
+
+        const floorTypeSelect = document.getElementById('floorType');
+        const sqftInput = document.getElementById('sqftInput');
+        const sqftBadge = document.getElementById('sqftBadge');
+        const optPrep = document.getElementById('optPrep');
+        const optRemoval = document.getElementById('optRemoval');
+
+        const outMaterial = document.getElementById('outMaterial');
+        const outLabor = document.getElementById('outLabor');
+        const outAddons = document.getElementById('outAddons');
+        const outTotal = document.getElementById('outTotal');
+
+        function calculateEstimate() {
+            const sqft = parseInt(sqftInput.value, 10);
+            const selectedType = floorTypeSelect.value;
+            sqftBadge.textContent = sqft.toLocaleString();
+
+            const baseRates = estimatorConfig[selectedType];
+            const materialCost = sqft * baseRates.materialPerSqft;
+            const laborCost = sqft * baseRates.laborPerSqft;
+
+            let addonCost = 0;
+            if (optPrep.checked) {
+                addonCost += sqft * estimatorConfig.addons.subfloorPrepPerSqft;
+            }
+            if (optRemoval.checked) {
+                addonCost += sqft * estimatorConfig.addons.tearOutPerSqft;
+            }
+
+            const totalCost = materialCost + laborCost + addonCost;
+
+            outMaterial.textContent = '$' + materialCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            outLabor.textContent = '$' + laborCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            outAddons.textContent = '$' + addonCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+            const lowerRange = Math.round(totalCost * 0.95);
+            const upperRange = Math.round(totalCost * 1.10);
+            outTotal.textContent = '$' + lowerRange.toLocaleString() + ' - $' + upperRange.toLocaleString();
+        }
+
+        floorTypeSelect.addEventListener('change', calculateEstimate);
+        sqftInput.addEventListener('input', calculateEstimate);
+        optPrep.addEventListener('change', calculateEstimate);
+        optRemoval.addEventListener('change', calculateEstimate);
+        
+        // Initial invocation
+        calculateEstimate();
+    </script>
+</body>
+</html>
